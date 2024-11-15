@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://vgxokvv4j5r5"]
+
+[ext_resource type="Texture2D" uid="uid://qhvuai2638qy" path="res://Assets/blue_tank.png" id="1_ekuoy"]
+[ext_resource type="Script" path="res://Scripts/player_1.gd" id="1_xhcuo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nu1j"]
+size = Vector2(111, 89)
+
+[node name="player1" type="CharacterBody2D"]
+script = ExtResource("1_xhcuo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ekuoy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1)
+shape = SubResource("RectangleShape2D_3nu1j")
+
+[node name="shooting_point" type="Marker2D" parent="."]
+position = Vector2(85, 0)
